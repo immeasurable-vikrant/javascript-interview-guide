@@ -1,1 +1,0 @@
-# frontend_interview_guide
