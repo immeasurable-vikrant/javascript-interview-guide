@@ -89,3 +89,34 @@ console.log(num);
 when the function increment() is executed and await keyword is found in an async function, then whatever statement is after await starts acting as a Promise resolve, therefore the execution pauses over-there and moves to the line below increment() call. Thereby executing num += 1; console.log(num); and logging 1.
 
 When the call stack becomes empty the control returns back to await 2 and now the statement over there is num = num + 2 the 2nd num over here still being 0, so 0 + 2 = 2. Therefore 2 gets logged.`
+
+
+var name = "mmt";
+var myObject = {
+  name: "myObject",
+  property: this.name,
+  regularFunction: function() {
+    return this.name
+  },
+  arrowFunction: () => {
+    return this.name;
+  },
+  iife: (function() {
+    return this.name
+  })()
+}
+ 
+console.log('this.name: ' + this.name);  
+console.log('myObject.name: ' + myObject.name); 
+console.log('myObject.property: ' + myObject.property); 
+console.log('myObject.iife: '+ myObject.iife);  
+console.log(myObject.regularFunction()); 
+
+
+const regFn = myObject.regularFunction; 
+console.log('regfn.call: ' + regFn.call(myObject)) 
+console.log('regfn(): ' + regFn()); 
+console.log('regFn.call(window): ' + regFn.call(window)); 
+console.log('myObject.arrowFunction.call(myObject): ' + myObject.arrowFunction.call(myObject)); 
+console.log('myObject.arrowFunction(): ' + myObject.arrowFunction()) 
+console.log('myObject.arrowFunction.call(window)  ' + myObject.arrowFunction.call(window)) 
