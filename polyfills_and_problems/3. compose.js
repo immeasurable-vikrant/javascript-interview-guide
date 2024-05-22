@@ -85,7 +85,7 @@ console.log(composedFunction3(1, 2)); // Output: 9
 
 
 
-//V.Important
+//V.Important - This solves almost all use cases
 function multiply1(a, b) {
     return a * b;
 }

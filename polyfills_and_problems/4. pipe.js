@@ -41,7 +41,7 @@ console.log(pipeFunct(2, 3, 4));
 
 
 
-
+// Important - It handles almost all arguments
 function multiply(a, b) {
 	return a * b;
 }
