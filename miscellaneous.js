@@ -120,3 +120,16 @@ console.log('regFn.call(window): ' + regFn.call(window));
 console.log('myObject.arrowFunction.call(myObject): ' + myObject.arrowFunction.call(myObject)); 
 console.log('myObject.arrowFunction(): ' + myObject.arrowFunction()) 
 console.log('myObject.arrowFunction.call(window)  ' + myObject.arrowFunction.call(window)) 
+
+
+//Problem - Aksed in Atlassian Interview -
+
+const arr = ["name"]
+const obj = {}
+
+obj.name = "frontend"
+
+obj[arr] = "React"
+
+
+console.log(obj.name)
