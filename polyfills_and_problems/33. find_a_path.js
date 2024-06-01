@@ -45,4 +45,10 @@ if (path) {
 }
 
 
-`The if(nestedPath) condition below the recursive call findPath(obj[key], targetValue, [...currPath, key]) is used to check if the recursive call returned a valid path. If a nested path is found, it will be a truthy value, indicating that the target value was found within the nested object. In this case, the function returns the nested path. If the nested path is not found (i.e., it's null), the loop continues to search through other keys in the current object. This condition ensures that the function terminates and returns the path once the target value is found.`
+`The if(nestedPath) condition below the recursive call findPath(obj[key], targetValue, 
+[...currPath, key]) is used to check if the recursive call returned a valid path. If a 
+nested path is found, it will be a truthy value, indicating that the target value was found 
+within the nested object. In this case, the function returns the nested path. If the nested 
+path is not found (i.e., it's null), the loop continues to search through other keys in the 
+current object. This condition ensures that the function terminates and returns the path 
+once the target value is found.`

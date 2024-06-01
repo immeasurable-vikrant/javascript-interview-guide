@@ -1,7 +1,12 @@
-// Time based Throttle
+`Time based Throttle
 
-// If both options are true it will work as "leading" only and only if leading is "false", then only it will work as "trailing".
-// Define a throttle function that takes three parameters: 'func' (the function to throttle), 'delay' (the time interval to throttle), and 'option' (an object with leading and trailing options)
+If both options are true it will work as "leading" only and only if leading is "false", 
+then only it will work as "trailing".
+Define a throttle function that takes three parameters: 'func' (the function to throttle), 
+'delay' (the time interval to throttle), and 'option' (an object with leading and 
+trailing options)`
+
+
 const throttle = (func, delay, option = { leading: true, trailing: true }) => {
     let lastTimerId;
     let lastArgs; // Keeps track of the last arguments passed to the throttled function

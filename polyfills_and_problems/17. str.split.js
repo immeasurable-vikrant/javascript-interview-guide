@@ -7,7 +7,8 @@ const split = (string, delimiter) => {
     
     // Define a recursive function to split the string
     const startSplit = (str, i) => {
-        // Base case: If the index (i) is greater than or equal to the length of the string, exit the function
+        // Base case: If the index (i) is greater than or equal to the 
+        // length of the string, exit the function
         if (i >= string.length) return;
         
         // Find the index of the delimiter in the substring of the string starting from index i

@@ -3,7 +3,7 @@ LRU (Least Recently Used):
     What: LRU is a caching algorithm that removes the least recently used items from the 
     cache when the cache reaches its maximum capacity.
 
-    Why: The idea behind LRU is that items that have not been accessed for a long time are 
+    Why: The idea behind LRU is that 'items' that have not been accessed for a long time are 
     less likely to be accessed in the near future, so they are good candidates for removal 
     from the cache. By removing the least recently used items, LRU maximizes the likelihood 
     of retaining frequently accessed or recently accessed items in the cache.
@@ -11,6 +11,11 @@ LRU (Least Recently Used):
     Usage: LRU is widely used in various applications, including web servers, databases, 
     and operating systems, where caching is used to improve performance by storing frequently
     accessed data in memory.
+    
+    Important:  LRU (Least Recently Used) is an eviction strategy used in caching systems. 
+    It is designed to manage and maintain a cache by ensuring that the most frequently accessed 
+    items are kept readily available while less frequently accessed items are removed when the 
+    cache reaches its capacity. 
 `;
 class LRU {
   constructor(max = 5) {

@@ -90,7 +90,7 @@ console.log(sumFunc(1)(2)(3)()); // Outputs: 6
 console.log(sumFunc(1, 2)(3, 4)()); // Outputs: 10
 console.log(sumFunc(1)(2, 3)(4)()); // Outputs: 10
 
-// Problem 4:
+// Problem 3:
 const curryingFunc = (func) => {
   // Define a helper function that handles currying
   const helper = (...args) => {
@@ -122,8 +122,9 @@ console.log(curriedSum(1, 2, 3, 4, 5)); // Output: 15
 console.log(curriedSum(1)(2, 3)(4, 5)); // Output: 15
 console.log(curriedSum(1)(2)(3)(4)(5)); // Output: 15
 
-// Problem 5:
-// The valueOf() method of Object instances converts the this value to an object. This method is meant to be overridden by derived objects for custom type conversion logic.
+// Problem 4:
+// The valueOf() method of Object instances converts the this value to an object. 
+// This method is meant to be overridden by derived objects for custom type conversion logic.
 // example:
 function MyNumberType(n) {
   this.number = n;
@@ -159,7 +160,8 @@ console.log(addFunc(1, 2)(3).value() === 6); //true
 console.log(addFunc(1)(2)(3).value() === 6); //true
 console.log(addFunc(1)(2) + 3); // 6
 
-// Problem 6:
+
+// Problem 5:
 function sum(num) {
   let currentSum = num;
 
@@ -175,20 +177,6 @@ function sum(num) {
   return add; // Return the function for chaining
 }
 
-console.log(sum(1)(2)(3).toString()); // Output: 6
-
-function add(...args) {
-  let total = 0;
-
-  return function sum(num = 0) {
-    total += num;
-    return total;
-  };
-
-  sum.toString = function () {
-    return total;
-  };
-}
 console.log(sum(1)(2)(3).toString()); // Output: 6
 
 `

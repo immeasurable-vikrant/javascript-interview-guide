@@ -89,3 +89,7 @@ Advantages of EventEmitter:
     program by allowing them to communicate through events without direct dependencies.
 - Scalability: Facilitates scalable and maintainable code by organizing asynchronous 
     and event-driven logic in a structured manner.`
+
+
+
+  

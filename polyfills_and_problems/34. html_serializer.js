@@ -36,10 +36,8 @@ function serialize(element) {
     let tagName = element.tagName.toLowerCase();
     let serialized = `<${tagName}`;
 
-    // console.log("elememt", element.attributes);
     // Serialize attributes
     for (let attr of element.attributes) {
-      console.log("attr", attr.name);
       serialized += ` ${attr.name}="${attr.value}"`;
     }
 
@@ -51,6 +49,7 @@ function serialize(element) {
     }
 
     serialized += `</${tagName}>`;
+    
     return serialized;
   }
 
@@ -72,7 +71,7 @@ function serialize(element) {
 // Example usage
 let element = document.querySelector("body"); // Select the body element or any element you want to serialize
 let htmlString = serialize(element);
-console.log("htmlString", htmlString);
+// console.log("htmlString", htmlString);
 
 `Explanation
 
