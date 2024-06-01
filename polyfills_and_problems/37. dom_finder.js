@@ -68,5 +68,3 @@ const findNodeValue = () => {
 };
 // Log the value of the equivalent node in rootB
 console.log("findNodeValue", findNodeValue());
-
-const domFinder = () => {};
