@@ -1,5 +1,6 @@
 // Atlassian frontend interview question
-`To optimize API call efficiency by reducing redundant requests and minimizing latency 
+`
+To optimize API call efficiency by reducing redundant requests and minimizing latency 
 through a caching mechanism.`;
 
 // cachedAPI is a higher-order function that returns a caching function for API calls.

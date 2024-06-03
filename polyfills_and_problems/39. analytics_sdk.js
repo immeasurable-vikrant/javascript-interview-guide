@@ -1,5 +1,6 @@
 // Write an analytics SDK that exposes logEvent, it takes in analytics events and queues them
-// - pass a function sendAnalyticsEvent as a parameter(implement a stub function that resolves in 1 second and fails every n%10 times)
+// - pass a function sendAnalyticsEvent as a parameter(implement a stub function that resolves in 
+// 1 second and fails every n%10 times)
 // - send the next event to sendAnalyticsEvent when only after it resolves
 // - when the failure occurs attempt a retry
 

@@ -133,3 +133,23 @@ obj[arr] = "React"
 
 
 console.log(obj.name)
+
+const myObject = {
+  abc: "bar",
+  func() {
+      const self = this;
+      console.log(`outer func: this.abc = ${  this.abc}`);
+      console.log(`outer func: self.abc = ${  self.abc}`);
+      (function() {
+          console.log(`inner func: this.abc = ${  this.abc}`);
+          console.log(`inner func: self.abc = ${  self.abc}`);
+      }());
+  }
+};
+
+/*
+outer func: this.abc = bar
+outer func: self.abc = bar
+inner func: this.abc = undefined
+inner func: self.abc = bar
+*/
