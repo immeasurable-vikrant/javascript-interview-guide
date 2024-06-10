@@ -1,5 +1,6 @@
 // Detailed Example of Inheritance in JavaScript using Prototype Chain
-// Let's consider a scenario where we have a base class Person, and we derive Employee and Manager from it.
+// Let's consider a scenario where we have a base class Person, and we derive Employee and 
+// Manager from it.
 
 // Base constructor function
 function Person(name, age) {

@@ -1,4 +1,6 @@
 `
+  Async in Sequence or Async in Series
+  
   The task is to execute multiple asynchronous tasks sequentially and handle their results 
   and errors. Specifically, create an array of asynchronous tasks, execute them one after 
   the other in sequence, and process the results and errors using a callback function. 

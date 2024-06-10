@@ -1,0 +1,12 @@
+ Cross site scripting (XSS) - Done
+- Cross site forgery attack (CSRF) - Done
+- XML external entity (XEE) - Done
+- Authentication and its best practices - Done
+- Authorization and its best practices - Done
+- DDOS - Done
+- CORs - WIP
+- Code injection
+- Session management and its best practices
+- Server side request forgery
+- Cross frame scripting
+- Keeping web safe and secure
