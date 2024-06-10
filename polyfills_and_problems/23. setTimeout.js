@@ -64,8 +64,10 @@ function createSetTimeout() {
           // to recheck and execute the callback as soon as possible after
           // the delay has elapsed.
           setTimeout(triggerCallback, Math.max(0, start + delay - Date.now()));
-          // Math.max(0, start + delay - Date.now()) calculates the remaining time until the target timestamp.If the target time has already passed, this will result in 0, meaning the callback should be executed immediately.
-          //   If the target time is in the future, this will result in the number of milliseconds left until the target time.
+          // Math.max(0, start + delay - Date.now()) calculates the remaining time until the 
+          // target timestamp.If the target time has already passed, this will result in 0, 
+          // meaning the callback should be executed immediately. If the target time is in the future, 
+          // this will result in the number of milliseconds left until the target time.
         }
       }
     }
@@ -97,8 +99,8 @@ console.log("start");
 
 // Set a custom timeout and assign it to myId
 setTimeoutPolyfill(function () {
-  console.log("Welcome to jscafe"); // This will be logged after 1000 milliseconds
-}, 7000);
+  console.log("I will be called after a delay"); // This will be logged after 1000 milliseconds
+}, 3000);
 
 // Clear the timeout before it executes
 // clearTimeoutPoly(myId);
@@ -141,7 +143,6 @@ console.log("end");
 		- Recording the start time allows for precise calculation of 
 		elapsed time, ensuring accurate timer execution.
 	
-
 
 	4. triggerCallback Function:
 

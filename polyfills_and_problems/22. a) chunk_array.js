@@ -1,5 +1,4 @@
-`Implement _.chunk()
-// Lodash
+`Implement _.chunk() --> Lodash
 
 _.chunk() splits array into groups with the specific size.
 
@@ -22,6 +21,7 @@ chunk([1,2,3,4,5], 5)
 for size smaller than 1, return an empty array.
 `;
 
+
 function chunk(arr, size) {
   // If the array is empty or size is less than or equal to 0, return an empty array.
   if (arr.length === 0 || size <= 0) {
@@ -38,7 +38,9 @@ function chunk(arr, size) {
 
     // Populate the chunk array with the appropriate elements.
     for (let j = 0; j < size && i + j < arr.length; j++) {
-      chunk.push(arr[i + j]);
+      // console.log("j", j)
+      // console.log("i + j", i + j)
+      chunk.push(arr[j]);
     }
 
     // Add the chunk to the result array.
@@ -49,8 +51,8 @@ function chunk(arr, size) {
 }
 
 // Test cases
-console.log(chunk([1, 2, 3, 4, 5], 1)); // [[1], [2], [3], [4], [5]]
-console.log(chunk([1, 2, 3, 4, 5], 2)); // [[1, 2], [3, 4], [5]]
+// console.log(chunk([1, 2, 3, 4, 5], 1)); // [[1], [2], [3], [4], [5]]
+// console.log(chunk([1, 2, 3, 4, 5], 2)); // [[1, 2], [3, 4], [5]]
 console.log(chunk([1, 2, 3, 4, 5], 3)); // [[1, 2, 3], [4, 5]]
 console.log(chunk([1, 2, 3, 4, 5], 4)); // [[1, 2, 3, 4], [5]]
 console.log(chunk([1, 2, 3, 4, 5], 5)); // [[1, 2, 3, 4, 5]]
