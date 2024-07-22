@@ -36,16 +36,20 @@
         6. Improving Code Flexibility and Reusability: Ensuring that code can be easily adapted to 
         different scenarios and reused across different contexts. This includes defining reusable 
         templates for algorithms (Template Method) or encapsulating varying behavior in separate 
-        classes (Strategy).``Terms you should know
+        classes (Strategy).`
+        
+`Terms you should know
 
 Creational Design Pattern:
 
-Creational design patterns are a category of design patterns that deal with object creation mechanisms, attempting to create objects in a manner suitable to the situation. They aim to solve problems related to object creation and initialization, providing flexibility and reusability in object creation processes.
+Creational design patterns are a category of design patterns that deal with object creation mechanisms, 
+attempting to create objects in a manner suitable to the situation. They aim to solve problems related 
+to object creation and initialization, providing flexibility and reusability in object creation processes.
 
+"Interface" refers to a way of defining a contract or a set of rules that a class must follow.
+It specifies the methods that a class must implement, but it doesn't provide the implementation details.
 
-"Interface" refers to a way of defining a contract or a set of rules that a class must follow. It specifies the methods that a class must implement, but it doesn't provide the implementation details.
-
-𝗪𝗵𝗲𝗻 𝘁𝗼 𝘀𝗲𝗹𝗲𝗰𝘁 𝗗𝗲𝘀𝗶𝗴𝗻 𝗣𝗮𝘁𝘁𝗲𝗿𝗻𝐬?
+When should I use design patterns?
 
 Choosing the correct design pattern in software engineering is critical to practical problem-solving.
 

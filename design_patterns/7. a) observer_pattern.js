@@ -1,3 +1,7 @@
+// Observer Pattern (Behavioral design pattern)
+// Behavioral design patterns focus on communication and interaction between objects, 
+// defining how they collaborate and share responsibilities. They aim to improve flexibility 
+// in carrying out complex tasks by establishing efficient and manageable interaction patterns.
 
 `What it does: The Observer Pattern is a behavioral design pattern where an object, known as 
 the subject, maintains a list of its dependents, called observers, and notifies them of any 
