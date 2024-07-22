@@ -96,4 +96,3 @@ asyncInParallel(tasks, (results, errors) => {
   console.log("results", results); // Log the array of results
   console.error("errors", errors); // Log the array of errors
 });
-

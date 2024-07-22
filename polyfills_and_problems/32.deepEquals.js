@@ -44,7 +44,7 @@ const objC = { a: 1, b: { c: 3 } };
 console.log(deepEquals(objA, objB)); // true
 console.log(deepEquals(objA, objC)); // false
 
-/* 
+/*  
 This deepEquals function compares objects deeply by recursively checking their properties. It handles nested objects and arrays as well. Note that this is a basic implementation, and depending on specific requirements, you might need to add more checks or handle special cases.
 
 In an interview, you can discuss the time complexity of your implementation and mention that it's generally O(n), where n is the total number of properties in the objects being compared.

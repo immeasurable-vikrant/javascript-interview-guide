@@ -1,6 +1,10 @@
-// // Function composition is the process of chaining together multiple functions to form a new function. It involves applying a series of transformations or operations to an input value, where the output of one function becomes the input of the next function in the composition chain.
+// // Function composition is the process of chaining together multiple functions to form a new function. 
+// It involves applying a series of transformations or operations to an input value, where the output of 
+// one function becomes the input of the next function in the composition chain.
 
-// // The compose function takes in two or more functions and returns a new function that applies these functions in right-to-left order. This means that the rightmost function is applied first, followed by the next function to its left, and so on.
+// // The compose function takes in two or more functions and returns a new function that applies these 
+// functions in right-to-left order. This means that the rightmost function is applied first, followed by 
+// the next function to its left, and so on.
 
 //Unary Paramter
 const add5 = (x) => x + 5;

@@ -5,9 +5,9 @@ number of calls are made within a certain time interval. If the call limit is re
 additional calls should be queued and executed later when the interval resets.
 
 - Rate Limiting: 
-        Rate limiting is a technique used to control the rate at which a particular 
-        action is performed. In this context, it restricts how frequently a function 
-        can be called to prevent overloading a system or API.
+    Rate limiting is a technique used to control the rate at which a particular 
+    action is performed. In this context, it restricts how frequently a function 
+    can be called to prevent overloading a system or API.
 
 `;
 
@@ -24,7 +24,9 @@ function rateLimit(func, limit, interval) {
     calls = 0;
 
     // Process the queued calls if there are any
+    // This loop continues until either the queue is empty or the limit is reached again
     while (queue.length > 0 && calls < limit) {
+      // Dequeue the first call in the queue
       const { resolve, reject, args } = queue.shift();
       try {
         // Execute the function and resolve the promise
@@ -38,6 +40,7 @@ function rateLimit(func, limit, interval) {
     }
 
     // If there are still queued calls, schedule another reset
+    // This ensures that queued calls are eventually processed
     if (queue.length > 0) {
       setTimeout(resetCalls, interval);
     }
@@ -49,6 +52,7 @@ function rateLimit(func, limit, interval) {
   // Return the rate-limited version of the function
   return function (...args) {
     return new Promise((resolve, reject) => {
+      // check whether the number of function calls made within the current interval is less than the specified limit.
       if (calls < limit) {
         try {
           // If the call limit is not reached, execute the function immediately
@@ -71,7 +75,7 @@ function rateLimit(func, limit, interval) {
 const limitedFunction = rateLimit(console.log, 2, 1000);
 
 // Test the rate-limited function
-limitedFunction("Call 1");
-limitedFunction("Call 2");
-limitedFunction("Call 3"); // This call will be delayed
-limitedFunction("Call 4"); // This call will also be delayed
+limitedFunction("Call 1"); // This will execute immediately
+limitedFunction("Call 2"); // This will execute immediately
+limitedFunction("Call 3"); // This will be added to the queue and executed later
+limitedFunction("Call 4"); // This will be added to the queue and executed later

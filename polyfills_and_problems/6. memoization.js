@@ -65,3 +65,15 @@ function myMemoized(fn, context) {
   console.log(factorial(6))
   
   
+
+  function memoization(fn, context = {}){
+    let cache = {}
+    return (...args) => {
+      let argsKey = JSON.stringify(args);
+
+      if(!cache[argsKey]){
+        fn.call(context || this, ...args)
+      }
+      return cache[argsKey]
+    }
+  }

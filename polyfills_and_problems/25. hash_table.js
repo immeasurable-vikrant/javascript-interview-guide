@@ -92,7 +92,6 @@ class HashTable {
     }
     return undefined;
   }
-
   remove(key) {
     let index = this.hash(key);
     // this.table[index] = undefined

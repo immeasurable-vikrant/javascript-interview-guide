@@ -25,16 +25,24 @@ function add(x) {
 const add5 = add(5); // Partial application, creating a new function with x = 5
 console.log(add5(3)); // Outputs: 8
 
-// Benefits of Currying:
+`
+Benefits of Currying:
+Modularity and Reusability: Currying allows you to create specialized versions of functions 
+  by partially applying arguments. These specialized functions can then be reused in different 
+  contexts, promoting modularity and reducing code duplication.
 
-// Modularity and Reusability: Currying allows you to create specialized versions of functions by partially applying arguments. These specialized functions can then be reused in different contexts, promoting modularity and reducing code duplication.
+Partial Application: Curried functions enable partial application, where you can fix some arguments 
+  upfront and defer the application of others. This is particularly useful in scenarios where you want 
+  to reuse a function with certain parameters predefined.
 
-// Partial Application: Curried functions enable partial application, where you can fix some arguments upfront and defer the application of others. This is particularly useful in scenarios where you want to reuse a function with certain parameters predefined.
+Function Composition: Currying facilitates function composition, allowing you to combine smaller 
+  functions to create more complex ones. By breaking down functions into smaller units, you can 
+  compose them together to perform intricate operations.
 
-// Function Composition: Currying facilitates function composition, allowing you to combine smaller functions to create more complex ones. By breaking down functions into smaller units, you can compose them together to perform intricate operations.
-
-// // Using Currying in Practice:
-// Currying can be especially handy when dealing with functions that require multiple configurations or options. For instance, in libraries like Lodash or Ramda, currying is extensively used to create flexible and composable utility functions.
+Using Currying in Practice:
+  Currying can be especially handy when dealing with functions that require multiple configurations or 
+  options. For instance, in libraries like Lodash or Ramda, currying is extensively used to create flexible 
+  and composable utility functions.`
 
 // Here's an example using currying with a hypothetical multiply function:
 function multiply(x) {

@@ -1,8 +1,10 @@
 `
 Deep Cloning Polyfill and Concepts:
 
-  Deep cloning, on the other hand, creates a completely independent copy of the original object 
-  and all of its nested objects. It recursively copies all nested structures.
+  Shallow Cloning: Copies only the immediate properties of the object.
+    Nested objects are not fully copied; only their references are copied.
+ Deep Cloning: Recursively copies all properties and nested objects, ensuring the cloned 
+  object is entirely independent of the original.
   
   Example of Deep Cloning:`;
 

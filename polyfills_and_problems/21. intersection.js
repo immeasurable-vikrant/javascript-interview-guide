@@ -18,6 +18,9 @@ function intersection(arr1, arr2) {
 // Example usage of intersection function
 console.log(intersection([1, 2, 3, 4, 5], [3, 4, 5])); // Output: [3, 4, 5]
 
+
+
+
 // Function to find intersection of two arrays using a custom comparator function
 function intersectionWith(arr1, arr2, comparator) {
     // Check if both parameters are arrays
