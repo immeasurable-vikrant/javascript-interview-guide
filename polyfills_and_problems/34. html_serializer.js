@@ -124,7 +124,8 @@ Use Cases for an HTML Serializer:
     Web pages often have dynamic content that is manipulated via JavaScript. An HTML serializer captures these changes.
 
 2. Saving State:
-    If you need to save the current state of a web page (for instance, saving a user's progress in a form), serializing the DOM can be very useful.
+    If you need to save the current state of a web page (for instance, saving a user's progress in a form), serializing 
+    the DOM can be very useful.
 
 3. Transmitting HTML:
     Sending the current state of a page or part of a page to a server for processing or saving.

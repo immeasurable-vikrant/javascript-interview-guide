@@ -3,6 +3,10 @@
     It facilitates communication between objects in a system by allowing objects to 
     subscribe to events and be notified when those events occur.
 
+    (Event-driven programming is a paradigm where program flow is controlled by events 
+    (e.g., user actions, sensor outputs, messages). The program reacts to these events 
+    by executing specific handlers.)  - Core Concepts - Events, Event Handlers & Event Loop.
+
   Why: EventEmitter is useful for decoupling components in a system. Instead of objects 
     having direct references to each other and calling methods on those objects, they can 
     communicate through events. This promotes loose coupling and makes the system more 
@@ -11,11 +15,14 @@
 
 class EventEmitter {
   constructor() {
-    // Initialize an object to store event listeners
+    // Initializes an empty object events to store event names and their associated listeners.
     this.events = {};
   }
 
-  // Method to subscribe to events
+  // Method to subscribe to events or Registers a listener for a specified event.
+  // Parameters:
+  // event: The name of the event you want to listen for (e.g., 'message' or 'click').
+  // listener: The function that should be called when the event is emitted.
   on(event, listener) {
     // If the event doesn't exist in the events object, create it
     if (!this.events[event]) {
@@ -25,7 +32,7 @@ class EventEmitter {
     this.events[event].push(listener);
   }
 
-  // Method to emit events
+  // Method to emit events - Triggers the event and calls all registered listeners with the given arguments.
   emit(event, ...args) {
     // If the event doesn't exist in the events object, return
     if (!this.events[event]) {
