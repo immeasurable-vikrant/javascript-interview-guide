@@ -42,9 +42,9 @@ console.log("grouping", grouping(cars)); // corrected the typo in console.log
 // Here's a polyfill for the groupBy function in JavaScript:
 function groupBy(array, fn) {
   // Using the reduce method to iterate over the array and accumulate the result
-  return array.reduce((acc, item) => {
+  return array.reduce((acc, curr) => {
     // Applying the provided function to each item to determine the grouping key
-    const key = fn(item);
+    const key = fn(curr);
 
     // Checking if the key already exists in the accumulator object
     if (!acc[key]) {
@@ -53,7 +53,7 @@ function groupBy(array, fn) {
     }
 
     // Pushing the current item to the array corresponding to its key
-    acc[key].push(item);
+    acc[key].push(curr);
 
     // Returning the updated accumulator for the next iteration
     return acc;

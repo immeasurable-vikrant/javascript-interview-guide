@@ -1,8 +1,19 @@
-// Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase. This means that you can use variables and functions before they are declared in your code. However, it’s important to note that only the declarations are hoisted, not the initializations.
+`Hoisting is a behavior in JavaScript where variable and function declarations are moved to 
+the top of their containing scope during the compilation phase. This means that you can 
+use variables and functions before they are declared in your code. However, it’s important 
+to note that only the declarations are hoisted, not the initializations.
+
+var a;         // Declaration is hoisted
+console.log(a); // undefined (a is declared but not yet initialized)
+a = 10;        // Initialization remains in place
+console.log(a); // 10 (a is now initialized)
+`
+
 
 // 1. Variable Hoisting:
 
-console.log(x); // undefined - In this example, the var x declaration is hoisted to the top of the scope during compilation.
+console.log(x); // undefined - In this example, the var x declaration is hoisted to the top 
+// of the scope during compilation.
 var x = 5;
 console.log(x); // 5
 
@@ -120,7 +131,8 @@ Output:
 // Uncaught TypeError: hoisted is not a function
 
 Explanation: 
-// In JavaScript, function declarations are hoisted above variable declarations, while variable declarations are hoisted above other types of declarations like function expressions.
+// In JavaScript, function declarations are hoisted above variable declarations, while variable 
+// declarations are hoisted above other types of declarations like function expressions.
 //  Important: Function declarations are hoisted before variable declarations.
 
 // here's the code after hositing:
@@ -136,15 +148,14 @@ Explanation:
 
 // HOISTED FUNCTION
 function parent() {
-  var hoisted
-
-  function hoisted() {
+  function hoisted() { // function declaration hoisted
     return "I'm a function";
   }
+  var hoisted; // variable declaration hoisted
 
-  hoisted = "'I'm a variable"; 
-
-  return hoisted();
+  // at this point, hoisted is the function
+  hoisted = "'I'm a variable"; // the variable hoisted is assigned a string
+  return hoisted(); // TypeError: hoisted is not a function
 }
 console.log(parent());
 
@@ -164,6 +175,7 @@ Output:
 "I'm a function";
 
 
+
 // HOISTED
 
 function parent1() {
@@ -178,6 +190,11 @@ function parent1() {
   hoisted = "'I'm a variable";
 }
 console.log(parent1());
+`Function Declaration: The hoisted function is available and would return "I'm a function".
+Variable Declaration: The var hoisted; line initializes hoisted to undefined. So, by the time 
+the code executes return hoisted();, hoisted is not pointing to the function anymore but to undefined.
+Function Call: When hoisted() is called, it is attempting to call undefined, which is 
+not a function. This results in a TypeError.`
 
 
 // Example 5:

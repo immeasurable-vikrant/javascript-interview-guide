@@ -116,3 +116,19 @@ multiple tasks that can be in progress at the same time, though not necessarily 
 Concurrency allows for tasks to be interleaved, providing an efficient way to handle multiple operations without having 
 to complete one task before starting another.`
 
+`V.Imp
+
+Dependency Resolution:
+Concept: Managing tasks such that each task only executes after its dependencies have been completed. This is similar 
+  to resolving dependencies in a directed acyclic graph (DAG).
+
+Related Algorithm: Topological sorting is often used for ordering tasks in a DAG such that each task is 
+  processed only after its dependencies are completed. However, your implementation uses a more dynamic approach 
+  by checking dependencies at runtime.
+
+Concurrency Control:
+Concept: Limiting the number of tasks that can run concurrently. This ensures that no more than a specified number 
+  of tasks are running at the same time. Related Algorithm: This is more of a scheduling problem rather than 
+  a specific algorithm. It involves managing a queue of tasks and only executing new tasks when the concurrency 
+  limit allows. This can be thought of as a variation of the producer-consumer problem, where the producer is 
+  the taskQueue, and the consumer is the execution engine controlled by currentRunning.`

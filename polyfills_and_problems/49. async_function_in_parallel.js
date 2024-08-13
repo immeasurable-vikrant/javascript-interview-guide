@@ -8,11 +8,12 @@ these tasks using a callback function.
     their results as they complete. This is often used to improve performance by utilizing 
     concurrency.
 
-    Concurrency refers to the ability of a system to handle multiple tasks at the same time. 
-    It does not necessarily mean that tasks are executed simultaneously, but rather that progress 
-    is made on multiple tasks over the same period of time. This is particularly useful in 
-    environments where tasks are I/O bound (e.g., waiting for data from a disk, network, etc.), 
-    allowing the CPU to switch between tasks and make progress on each.
+  
+    Concurrency is the ability of a system to manage multiple tasks at the same time. It doesn't 
+    mean that tasks are completed at the exact same moment, but rather that the system is working 
+    on several tasks during the same time period. This is especially useful when tasks involve waiting 
+    for external resources, like reading data from a disk or over the internet. In these cases, the CPU 
+    can switch between tasks, ensuring that each task makes progress, rather than waiting idly.
 
     Key Concepts of Concurrency:
 
@@ -96,3 +97,4 @@ asyncInParallel(tasks, (results, errors) => {
   console.log("results", results); // Log the array of results
   console.error("errors", errors); // Log the array of errors
 });
+

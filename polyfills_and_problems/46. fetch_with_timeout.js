@@ -14,16 +14,8 @@ const fetchWithTimeout = (url, duration) => {
     // Start the fetch request with the provided URL and the abort signal.
     fetch(url, { signal })
       .then((resp) => {
-        // When the fetch completes, attempt to parse the response as JSON.
-        resp
-          .json()
-          .then((e) => {
-            clearTimeout(timerid); // Clear the timeout since the fetch completed successfully.
-            resolve(e); // Resolve the promise with the parsed JSON data.
-          })
-          .catch((error) => {
-            reject(error); // If JSON parsing fails, reject the promise with the error.
-          });
+        clearTimeout(timerid); // Clear the timeout since the fetch completed successfully.
+        resolve(resp); // Resolve the promise with the response.
       })
       .catch((error) => {
         // If the fetch request fails (e.g., due to network issues or abortion), reject the promise with the error.
@@ -42,15 +34,14 @@ const fetchWithTimeout = (url, duration) => {
 // Attempt to fetch data from the provided URL, with a timeout of 5000 milliseconds (5 seconds).
 fetchWithTimeout("https://jsonplaceholder.typicode.com/todos/1", 5000)
   .then((resp) => {
-    console.log(resp); // Log the response if the fetch completes successfully.
+    return resp.json(); // Parse the response as JSON.
+  })
+  .then((data) => {
+    console.log(data); // Log the parsed JSON data.
   })
   .catch((error) => {
-    console.error(error); // Log any errors that occur during the fetch or if it is aborted.
+    console.error(error); // Log any errors that occur during the fetch, JSON parsing, or if it is aborted.
   });
-
-
-
-
 
 `
   What is an AbortController?

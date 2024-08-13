@@ -39,7 +39,7 @@ const cachedAPI = (time) => {
     }
 
     // Return the cached value.
-    return cache[key].value;
+    return cache[key] ? cache[key].value : null
   };
 };
 
