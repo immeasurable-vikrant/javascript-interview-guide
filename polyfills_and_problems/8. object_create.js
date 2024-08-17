@@ -48,3 +48,22 @@ me.printIntroduction(); // Output: My name is Vikrant. Am I human? true
 
 
 
+
+
+if(!typeof Object.create !== 'function'){
+  Object.create = function(prototypeObject, propertiesObject){
+    function TempConstructor() {}
+
+    TempConstructor.prototype = prototypeObject
+
+    if(typeof propertiesObject == 'object'){
+      for(let property in propertiesObject){
+        if(property.hasOwnProperty(propertiesObject)){
+          TempConstructor[property] = propertiesObject[property]
+        }
+      }
+    }
+
+    return new TempConstructor()
+  }
+}

@@ -100,10 +100,10 @@ Steps:
 
 
 
-Configure CI/CD Runner:
+    Configure CI/CD Runner:
 
-For GitLab, configure a GitLab Runner to execute the pipeline steps defined in your configuration 
-file. GitLab Runners can run on your own infrastructure or use GitLab's shared runners.
+    For GitLab, configure a GitLab Runner to execute the pipeline steps defined in your configuration 
+    file. GitLab Runners can run on your own infrastructure or use GitLab's shared runners.
 
 3. Push Code to Repository:
     Push your React app code to the repository. This involves committing your code changes locally and 

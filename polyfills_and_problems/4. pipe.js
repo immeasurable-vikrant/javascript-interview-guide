@@ -75,9 +75,11 @@ const pipe = (obj) => {
     for (let key in obj) {
       let val = obj[key];
       if (typeof val === "function") {
-        obj[key] = val(...args);
+        obj[key] = obj[key](...args);
       } else {
-        obj[key] = pipe(val)(...args);
+        obj[key] = pipe(obj[key])(...args); // pipe(obj[key]) returns a new function that, 
+        // when invoked with arguments (using (...args)), processes the functions 
+        // inside the nested object.
       }
     }
     return obj;
@@ -85,3 +87,5 @@ const pipe = (obj) => {
 };
 
 console.log(pipe(obj)(1, 1, 1));
+
+// Output => { a: { b: 3, c: 1 }, d: -1 }

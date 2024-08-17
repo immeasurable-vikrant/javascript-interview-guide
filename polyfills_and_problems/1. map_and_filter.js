@@ -72,3 +72,5 @@ console.log("result", result)
 
 //Fix - instead of using "arrow" function, use "normal" function because "this" 
 // will be {} not the array we are calling this customMyFilter method on beacuse of arrow function.
+
+
